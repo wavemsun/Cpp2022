@@ -1,28 +1,34 @@
 #include <iostream>
 #include <vector>
-std::vector<int> deletElement (std::vector<int> vec, int k) 
+
+std::vector<int> deletElement(std::vector<int> vec, int k) 
 {
     for(int i = 0; i < vec.size(); ++i) 
     {
-        std::cin >> vec[i];
+        if (vec[i] == k)
+            vec.erase(vec.begin() + i, vec.begin() + i + 1);
     }
     return vec;
 }
 
 int main() {
     int n, k;
-    std::cout << "Enter number of numers: ";
+    std::cout << "Enter number of elements: ";
     std::cin >> n;
     std::vector<int> vec(n);
-    //std::cout << std::endl;
+    std::cout << "Enter elements: " << std::endl;
     for(int i = 0; i < vec.size(); ++i) 
     {
         std::cin >> vec[i];
     }
+    std::cout << "Enter deleting element: ";
+    std::cin >> k;
+    vec = deletElement(vec, k); 
     for(int i = 0; i < vec.size(); ++i) 
     {
         std::cout << vec[i] << "  ";
     }
+    std::cout << std::endl;
     
     return  0;
 }
