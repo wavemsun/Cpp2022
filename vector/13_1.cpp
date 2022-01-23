@@ -1,5 +1,6 @@
 #include<iostream>
+#include<vector>
 
 int main() {
-    std::cout << "First/////" << std::endl;
+    std::vector<int> vec;
 }
