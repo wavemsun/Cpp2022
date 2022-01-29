@@ -5,9 +5,12 @@ std::vector<int> deletElement(std::vector<int> vec, int k)
 {
     for(int i = 0; i < vec.size(); ++i) 
     {
-        if (vec[i] == k)
-            vec.erase(vec.begin() + i, vec.begin() + i + 1);
-    }
+        if (vec[i] == k) 
+        { 
+            vec.erase(vec.begin() + i);
+            //std::cout << vec[i] << " - " << i << " * " << b << std::endl;
+            --i;
+        }
     return vec;
 }
 
@@ -29,7 +32,6 @@ int main() {
         std::cout << vec[i] << "  ";
     }
     std::cout << std::endl;
-    
     return  0;
 }
 
