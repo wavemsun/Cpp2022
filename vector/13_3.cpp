@@ -3,11 +3,11 @@
 
 std::vector<int> addElement(std::vector<int> vec, int k) {
     if (vec.size() < 20) {
-            vec.push_back(k);
+        vec.push_back(k);
     } else {   
          
-            vec.push_back(k);
-            vec.erase(vec.begin());
+        vec.push_back(k);
+        vec.erase(vec.begin());
     }
     return vec;
 }

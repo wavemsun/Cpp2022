@@ -25,7 +25,7 @@ float summPrise(std::vector<float> vecPrice, std::vector<float> vecBuy) {
 
 int main() {
     int n, p;
-    std::cout << "Enter the number of goods: " << std::endl;
+    std::cout << "Enter the number of Prices: " << std::endl;
     std::cin >> n;
     std::cout << "Enter the number of buy: " << std::endl;
     std::cin >> p;
@@ -39,7 +39,8 @@ int main() {
     std::cout << "---------------------" << std::endl;
     printElement(vecPrice);
     printElement(vecBuy);
-    std::cout << "+" << summPrise(vecPrice, vecBuy) << std::endl;
+    std::cout << "---Result----" << std::endl;
+    std::cout << "Summ: " << summPrise(vecPrice, vecBuy) << std::endl;
     
     return  0;
 }
