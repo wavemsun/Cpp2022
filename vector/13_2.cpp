@@ -1,30 +1,24 @@
 #include <iostream>
 #include <vector>
 
-std::vector<float> enterElement(std::vector<float> vec) 
-{
-    for(int i = 0; i < vec.size(); ++i) 
-    {
+std::vector<float> enterElement(std::vector<float> vec) {
+    for(int i = 0; i < vec.size(); ++i) {
         std::cin >> vec[i];
     }
     return vec;
 }
 
-void printElement(std::vector<float> vec) 
-{
-    for(int i = 0; i < vec.size(); ++i) 
-    {
+void printElement(std::vector<float> vec) {
+    for(int i = 0; i < vec.size(); ++i) {
         std::cout << "  " << vec[i];
     }
     std::cout << std::endl;
 }
 
-float summPrise(std::vector<float> vecPrice, std::vector<float> vecBuy) 
-{
+float summPrise(std::vector<float> vecPrice, std::vector<float> vecBuy) {
     float summ = 0.0;
-    for(int i = 0; i < vecBuy.size(); ++i) 
-    {
-    summ += vecPrice[vecBuy[i]];
+    for(int i = 0; i < vecBuy.size(); ++i) {
+        summ += vecPrice[vecBuy[i]];
     } 
     return summ;
 }
