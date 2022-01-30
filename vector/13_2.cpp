@@ -14,7 +14,7 @@ void printElement(std::vector<float> vec)
 {
     for(int i = 0; i < vec.size(); ++i) 
     {
-        std::cout << " ++ " << vec[i];
+        std::cout << "  " << vec[i];
     }
     std::cout << std::endl;
 }
@@ -30,10 +30,19 @@ float summPrise(std::vector<float> vecPrice, std::vector<float> vecBuy)
 }
 
 int main() {
-    std::cout << "Enter vector price:  " << std::endl;
-    std::vector<float> vecPrice = enterElement(vecPrice);
-    std::vector<float> vecBuy = enterElement(vecBuy);  
-    std::cout << std::endl;
+    int n, p;
+    std::cout << "Enter the number of goods: " << std::endl;
+    std::cin >> n;
+    std::cout << "Enter the number of buy: " << std::endl;
+    std::cin >> p;
+    std::vector<float> vecPrice(n);
+    std::vector<float> vecBuy(p);
+    std::cout << "Enter vector price: " << std::endl;
+    vecPrice = enterElement(vecPrice);
+    std::cout << "---------------------" << std::endl;
+    std::cout << "Enter vector Buy: " << std::endl;
+    vecBuy = enterElement(vecBuy);  
+    std::cout << "---------------------" << std::endl;
     printElement(vecPrice);
     printElement(vecBuy);
     std::cout << "+" << summPrise(vecPrice, vecBuy) << std::endl;
