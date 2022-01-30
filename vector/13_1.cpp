@@ -8,13 +8,13 @@ std::vector<int> deletElement(std::vector<int> vec, int k)
         if (vec[i] == k) 
         { 
             vec.erase(vec.begin() + i);
-            //std::cout << vec[i] << " - " << i << " * " << b << std::endl;
             --i;
         }
     return vec;
 }
 
-int main() {
+int main() 
+{
     int n, k;
     std::cout << "Enter number of elements: ";
     std::cin >> n;

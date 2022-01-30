@@ -19,7 +19,7 @@ void printElement(std::vector<float> vec)
     std::cout << std::endl;
 }
 
-float summPrise(std::vector<float> vecPrice, std::vector<int> vecBuy) 
+float summPrise(std::vector<float> vecPrice, std::vector<float> vecBuy) 
 {
     float summ = 0.0;
     for(int i = 0; i < vecBuy.size(); ++i) 
