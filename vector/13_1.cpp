@@ -9,12 +9,13 @@ std::vector<int> enterElement(std::vector<int> vec) {
 }
 
 std::vector<int> deletElement(std::vector<int> vec, int k) {
+    std::vector<int> new_vec;
     for(int i = 0; i < vec.size(); ++i) {
-        if (vec[i] == k) { 
-            vec.erase(vec.begin() + i);
-            --i;
+        if (vec[i] != k) {
+            new_vec.push_back(vec[i]);   
         }
     }
+    vec = new_vec;
     return vec;
 }
 

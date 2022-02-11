@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> addElement(std::vector<int> vec, int k) {
-    if (vec.size() < 20) {
+/*std::vector<int> addElement(std::vector<int> vec, int k, int vec_size) {
+    if (vec.size() < 5) {
         vec.push_back(k);
     } else {   
          
@@ -10,24 +10,31 @@ std::vector<int> addElement(std::vector<int> vec, int k) {
         vec.erase(vec.begin());
     }
     return vec;
-}
-void printElement(std::vector<int> vec) {
-    for(int i = 0; i < vec.size(); ++i) {
-        std::cout << "  " << vec[i];
-    }
+}*/
+void printElement(std::vector<int> vec, int k) {
+    for (int i = k; i < vec.size(); ++i)
+		std::cout << vec[i] << " ";
+	for (int i = 0; i < k; ++i)
+		std::cout << vec[i] << " ";		
     std::cout << std::endl;
 }
 
 int main() {
-    int n;
+    const int vec_size = 20;
+    int n, it = 0;
     std::vector<int> vec;
-    while (n != -1) {
-        std::cout << "Enter " << vec.size() << " elements: " << std::endl;
+    do {
+        std::cout << "Enter elements: " << std::endl;
         std::cin >> n;
-        vec = addElement(vec, n);
-    }
-    std::cout << std::endl;
-    printElement(vec);
+        if (n != -1) {
+            if (vec.size() != vec_size) 
+                vec.push_back(n);
+            else 
+                (vec[(it++) % vec_size] = n);
+        } else {
+        printElement(vec, ((it++) % vec_size));
+        }
+    } while (n != -1);
     std::cout << std::endl;
     return 0;
 }
