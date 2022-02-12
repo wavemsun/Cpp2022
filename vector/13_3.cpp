@@ -32,7 +32,7 @@ int main() {
             else 
                 (vec[(it++) % vec_size] = n);
         } else {
-        printElement(vec, ((it++) % vec_size));
+            printElement(vec, ((it++) % vec_size));
         }
     } while (n != -1);
     std::cout << std::endl;
